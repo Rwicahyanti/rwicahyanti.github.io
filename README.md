@@ -30,8 +30,10 @@ OUR PRODUCT
 5.RI
 
 CONTACT US
+
 Head Office : Jl. LA. Sucipto 243 Malang
               Telp. 0341-494666/494998
+
 Email       : almertindo@gmail.com
 
 OUR MARKETING
@@ -50,7 +52,10 @@ OUR MARKETING
 
 7. Elis
 
-INSPIRED WEB : WWW.SUTROMANAGMENT.COM
-               WWW.PAKUWONCITY.COM
-               WWW.ROYALGREENDUBAI.COM
+INSPIRED WEB : 
+WWW.SUTROMANAGMENT.COM
+               
+WWW.PAKUWONCITY.COM
+
+WWW.ROYALGREENDUBAI.COM
                
