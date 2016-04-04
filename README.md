@@ -6,8 +6,11 @@ PT. 2A Propertindo atau lebih dikenal dengan Almertindo berdiri pada tanggal  20
 Almertindo bergerak dalam bidang pengembangan kawasan,pembangunan perumahan,penjualan kavling dan asset management.
 
 OUR PROJECT
+
 1. ORCHID GARDEN
+
 2. ALMER RESIDENCE
+
 3. ALMER HARMONY REGENCY
 4. PURWOSARI INSIDE
 5. PANDANWANGI
