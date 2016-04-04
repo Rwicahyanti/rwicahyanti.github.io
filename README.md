@@ -12,14 +12,20 @@ OUR PROJECT
 2. ALMER RESIDENCE
 
 3. ALMER HARMONY REGENCY
+
 4. PURWOSARI INSIDE
+
 5. PANDANWANGI
 
 OUR PRODUCT
 1.KSB
+
 2 RSB
+
 3.RBR
+
 4.RRS
+
 5.RI
 
 CONTACT US
@@ -28,10 +34,22 @@ Head Office : Jl. LA. Sucipto 243 Malang
 Email       : almertindo@gmail.com
 
 OUR MARKETING
+
 1. Ernawati
+
 2. Karsono
+
 3. Sofyan
+
 4. Zainal
+
 5. Atik
+
 6. Rendy
-7. Eli
+
+7. Elis
+
+INSPIRED WEB : WWW.SUTROMANAGMENT.COM
+               WWW.PAKUWONCITY.COM
+               WWW.ROYALGREENDUBAI.COM
+               
