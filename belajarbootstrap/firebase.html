@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Firebase Test</title>
+    
+     <script
+     src='https://cdn.firebase.com/js/client/2.4.2/firebase.js'>
+     </script>
+     
+    
+     <link href="css/bootstrap.min.css" rel="stylesheet">
+       <link rel="stylesheet" type="text/css" href=tugasrumah.css>
+ 
+  
+  </head>
+  <body>
+      
+      <h2 id="calldata"></h2>  <!--menampilkan data-->
+      
+  <script>    
+  var myFirebaseRef = new Firebase("https://codingmumrina.firebaseio.com/");
+      
+    myFirebaseRef.set({
+      title: "Hello World!",
+      author: "Firebase",
+      location: {
+        city: "San Francisco",
+        state: "California",
+        zip: 94103
+      }
+    });
+          myFirebaseRef.child("location/city").on("value", function(snapshot)  {   //snapshoot bisa diganti
+      //alert(snapshot.val());  // Alerts "San Francisco"
+  
+              //cara memanggil data
+var dataku =
+    document.getElementById ('calldata');
+              dataku.innerHTML = dataku.innerHTML +
+                  'saya berasal dari' + snapshot.val();  //snpshot.val hrs sama dengan fuction atasnya
+});
+      
+      myFirebaseRef.child("author").on("value", function(snapshot)  {   //snapshoot bisa diganti
+      //alert(snapshot.val());  // Alerts "San Francisco"
+  
+              //cara memanggil data
+var dataku =
+    document.getElementById ('calldata');
+              dataku.innerHTML = dataku.innerHTML +
+                  'buku ini dibuat oleh' + snapshot.val();  //snpshot.val hrs sama dengan fuction atasnya
+});
+  </script>
+      
+      
+      
+  </body>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Firebase Test</title>
+    
+     <script
+     src='https://cdn.firebase.com/js/client/2.4.2/firebase.js'>
+     </script>
+     
+     
+  </head>
+  <body>
+      
+      <div class="col-md-4 well">
+             <h1 class="header">PRICELIST</h1>
+           
+             <div class="row-fluid"> 
+        <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th class="center">TYPE</th> 
+                <th class="center">HARGA</th>
+            </tr>
+        </thead>
+             
+         <tbody>
+         <tr class="warning">
+             <td colspan="2">ALMER RESIDENCE</td>
+         </tr>
+            
+        <tr class="danger">
+             <td colspan="1"></td>
+             <td colspan="1"></td>
+         </tr>
+               
+         <tr class="warning">
+             <td colspan="2">ORCHID GARDEN</td>
+         </tr>
+             
+        <tr class="danger">
+            <td colspan="1"></td>
+            <td colspan="1"></td>
+         </tr>
+             
+         <tr class="warning">
+             <td colspan="2">ALMER HARMONY REGENCY</td>
+         </tr>
+             
+        <tr class="danger">
+            <td colspan="1"></td>
+            <td colspan="1"></td>
+         </tr>
+             
+         <tr class="warning">
+             <td colspan="2">PURWOSARI INSIDE</td>
+         </tr>
+             
+         <tr class="danger">
+             <td colspan="1"></td>
+             <td colspan="1"></td>
+         </tr>
+             
+        </tbody>
+    </table>
+    </div>
+      
+   <script>
+      var ref = new Firebase('https://tugasrumah.firebaseio.com/');
+       
+             ref.on("value", function(data) {
+            
+           var pricelist = data.val().pricelist;
+           
+           $.each(pricelist, function(index, value){
+               var type = value.type;
+               var harga = value.harga;
+            
+               $("table tbody").append(
+                   "<tr>"+
+                   "<td>"+type+"</td>"+
+                   "<td>"+harga+"</td>"+
+                   "<td>"+lokasi+"</td>"+
+                   "</tr>"
+                );
+               
+           });
+       });
+      </script>
+  
+      </div>     
+<script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+</script>
+          
+  
+      
+    </body>
+</html>

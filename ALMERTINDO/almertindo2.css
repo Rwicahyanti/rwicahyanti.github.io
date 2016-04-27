@@ -1,0 +1,26 @@
+.well {
+        text-align: center;
+        background-color: lightgrey;  
+        color:blue;
+        height: 600px;
+        }
+      .paragraf{ 
+          text-align: justify 
+              font-size:"14px";
+        }
+        .header {
+            color: crimson;        
+        }
+        .center {text-align: center;
+                 background-color:darksalmon;
+        }
+        .images {width:100%; 
+                height:300px
+        }
+     .carousel-inner > .item > img,
+     .carousel-inner > .item > a > img {
+      width: 100%;
+      height:80vh;
+      margin: auto;
+      } 
+     

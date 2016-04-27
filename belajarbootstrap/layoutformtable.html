@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+<style>
+      .well {
+          text-align: center;   /*mengatur posisi tulisan di tengah pada kolom*/
+      background: lightblue;  /*mengatur  warna background kolom*/ 
+      color:yellow;   /*mengatur warna font*/
+    }
+    .center {text-align: center;
+    }
+    .table-bordered > tbody > tr > td {  /*ini untuk menebalkan garis border pada tabel*. klo d pakai panggil di table class="table bordered"/
+        border:1px solid black;
+    }
+</style>
+  </head>
+ <body>
+        <div class="row"> <!---ini buat baris-->
+            <div class="col-md-1 well">
+            kolom 1
+         </div>
+         <div class="col-md-1 well">
+              kolom 2
+          </div>
+          <div class="col-md-1 well">
+              kolom 3
+          </div>
+          <div class="col-md-1 well">
+              kolom 4
+          </div>
+          <div class="col-md-1 well">
+              kolom 5
+          </div>
+          <div class="col-md-1 well">
+              kolom 6
+          </div>
+          <div class="col-md-1 well">
+              kolom 7
+          </div>
+          <div class="col-md-1 well">
+              kolom 8
+          </div>
+          <div class="col-md-1 well">
+              kolom 9
+          </div>
+          <div class="col-md-1 well">
+              kolom 10
+          </div>
+          <div class="col-md-1 well">
+              kolom 11
+          </div>
+          <div class="col-md-1 well">
+              kolom 12
+          </div>
+     </div>
+          
+    <div class="row"> <!---ini buat baris-->
+          <div class="col-md-4 well"> <!--ini membuat Kolom menjadi 3-->
+              ini kolom 1
+          </div>
+          <div class="col-md-4 well">
+              ini kolom 2
+          </div>
+          <div class="col-md-4 well">
+              ini kolom 3
+          </div>
+     </div>
+          <div class="row"> <!---ini buat baris-->
+          <div class="col-md-4 well"> <!--ini membuat Kolom menjadi menjadi 2 beda ukuran-->
+              ini kolom 1
+          </div>
+          <div class="col-md-8 well">
+              ini kolom 2
+          </div>
+        </div>
+
+     <div class="row"> <!---ini buat baris-->
+          <div class="col-md-6 well"> <!--ini membuat Kolom menjadi 2-->
+              ini kolom 1
+          </div>
+          <div class="col-md-6 well">
+              ini kolom 2
+          </div>
+    </div>
+     <div class="row"> <!---ini buat baris-->
+          <div class="col-md-12 well"> <!--ini membuat Kolom menjadi 12-->
+              ini kolom 1
+              <a class="btn btn-danger"> <!--membuat tombol/botton-->
+               Klik Saya
+              </a>
+          </div>
+    </div>
+    
+     
+     <div class="row-fliud"> <!---row fluid membuat kolom mengikuti ukuran screen-->
+     <table class="table table-striped table-bordered table-hover"> <!--striped,hover,bordered model tampilan tabel-->
+         <thead> <!--kepala tabel didalamnya ada tr dan th -->
+         <tr>
+             <th class="center">Nama</th> <!--mengatur posisi judul di tengah-->
+             <th class="center">Umur</th>   <!--buat css nya dulu-- .center-- didalam style-->
+         </tr>
+         </thead>
+         <tbody> <!--didalam body tabel ada tr dan td-->
+         <tr class="success">
+             <td class="center">mifan</td>
+             <td>17</td>
+         </tr>
+         <tr class="danger">
+             <td>Vany</td>
+             <td>17</td>
+         </tr>
+            <tr class="warning">
+             <td>Vany</td>
+             <td>17</td>
+         </tr>
+             <tr class="active">
+             <td>Vany</td>
+             <td>17</td>
+         </tr>
+        </tbody>
+    </table>
+    </div>
+     
+     <div class="row-fluid">
+     <form>
+         <div class="form-group">
+         <input class="form-control"
+                placeholder="username" type="text"> 
+         </div>
+         
+         <div class="form-group">
+         <input class="form-control"
+                placeholder="password" type="password">
+         </div>
+         </form>
+     </div>
+     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
