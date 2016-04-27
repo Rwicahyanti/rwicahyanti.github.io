@@ -15,70 +15,38 @@
   </head>
   <body>
       
-      <div class="col-md-4 well">
-             <h1 class="header">PRICELIST</h1>
-           
-             <div class="row-fluid"> 
-        <table class="table table-bordered table-striped table-hover">
-        <thead>
+      <table border=1 cellspacing=0>
+          <thead>
             <tr>
-                <th class="center">TYPE</th> 
-                <th class="center">HARGA</th>
+                <th>type</th> 
+                <th>harga</th>
+                <th>lokasi</th>
             </tr>
         </thead>
-             
-         <tbody>
-         <tr class="warning">
-             <td colspan="2">ALMER RESIDENCE</td>
-         </tr>
-            
-        <tr class="danger">
-             <td colspan="1"></td>
-             <td colspan="1"></td>
-         </tr>
-               
-         <tr class="warning">
-             <td colspan="2">ORCHID GARDEN</td>
-         </tr>
-             
-        <tr class="danger">
-            <td colspan="1"></td>
-            <td colspan="1"></td>
-         </tr>
-             
-         <tr class="warning">
-             <td colspan="2">ALMER HARMONY REGENCY</td>
-         </tr>
-             
-        <tr class="danger">
-            <td colspan="1"></td>
-            <td colspan="1"></td>
-         </tr>
-             
-         <tr class="warning">
-             <td colspan="2">PURWOSARI INSIDE</td>
-         </tr>
-             
-         <tr class="danger">
-             <td colspan="1"></td>
-             <td colspan="1"></td>
-         </tr>
-             
-        </tbody>
-    </table>
-    </div>
+          <tbody>
+            <!--akan diisi value dari firebase melalui javascript-->
+          </tbody>
+      </table>
       
    <script>
+       // 1. konek ke firebase
       var ref = new Firebase('https://tugasrumah.firebaseio.com/');
        
-             ref.on("value", function(data) {
+       //mengosongkan tbody
+       // $("table tbody").html("");
+       
+       //2. ambil data
+       ref.on("value", function(data) {
             
-           var pricelist = data.val().pricelist;
+           //. 3.Masukkan data produk ke variabel
+           var pricelist = data.val().PRICELIST;
            
+           //4.Mengeluarkan dan menampilkan data
            $.each(pricelist, function(index, value){
-               var type = value.type;
-               var harga = value.harga;
-            
+               var type = value.TYPE;
+               var harga = value.HARGA;
+               var lokasi = value.LOKASI;
+               
                $("table tbody").append(
                    "<tr>"+
                    "<td>"+type+"</td>"+
@@ -91,12 +59,8 @@
        });
       </script>
   
-      </div>     
-<script
-    src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
-</script>
-          
-  
       
-    </body>
-</html>
+      <script
+   src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </body>
+  </html>
