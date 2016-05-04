@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Firebase Test</title>
+    
+     <script
+     src='https://cdn.firebase.com/js/client/2.4.2/firebase.js'>
+     </script>
+     
+     
+  </head>
+  <body>
+   
+    <form id='myform'>  <!---form boleh diganti-ganti-->
+      <input type="text" name="type" placeholder="type">
+        <br>
+        <input type="text" name="harga" placeholder="harga">  
+         <br>
+          <input type="text" name="lokasi" placeholder="lokasi">
+          <br>
+          <button type="submit">Submit</button>
+    </form>
+      
+       <table border=1 cellspacing=0>
+          <thead>
+            <tr>
+                <th>type</th> 
+                <th>harga</th>
+                <th>lokasi</th>
+            </tr>
+        </thead>
+          <tbody>
+            <!--akan diisi value dari firebase melalui javascript-->
+          </tbody>
+      </table>
+      
+       <script
+   src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+      </script>
+      
+      <script>
+       var ref = new Firebase('https://tugasrumah.firebaseio.com/PRICELIST');
+          //aksi ketika form #myform di submit pake tombol
+      $("#myform").submit(function(event){
+          
+          //ambil data dari input text ke Array data
+          var data = $("#myform").serializeArray();
+          console.log(data);
+          
+          //parsing masing-masing data ke dalam variable
+          
+          var type = data[0].value;
+          var harga = data[1].value;
+          var lokasi = data[2].value;
+          
+          
+          //PUSH data ke firebase
+          ref.push({
+              type: type,
+              harga: harga,
+              lokasi: lokasi
+          });
+          
+          alert("data berhasil di submit");
+          $(this).closest('form').find("input, textarea").vol();
+        
+          console.log(type +"-"+ harga +"-"+ lokasi);
+          //ini supaya form input masuk ke J$
+          event.preventDefault();
+      });
+      
+      ref.on("value", function(data) {
+            
+           //. 3.Masukkan data produk ke variabel
+           var pricelist = data.val();
+           
+           //4.Mengeluarkan dan menampilkan data
+           $.each(pricelist, function(index, value){
+               var type = value.type;
+               var harga = value.harga;
+               var lokasi = value.lokasi;
+               
+               $("table tbody").append(
+                   "<tr>"+
+                   "<td >"+type+"</td>"+
+                   "<td>"+harga+"</td>"+
+                   "<td>"+lokasi+"</td>"+
+                   "</tr>"
+                );
+               
+           });
+       });
+      
+      </script>
+  </body>
+  </html>

@@ -1,24 +1,21 @@
- @import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
    h1{font-family:"lobster" !important} 
 
 @import url(https://fonts.googleapis.com/css?family=Architects+Daughter);
 
-.nav{background-color: #cc6600;
-     font-size: 14px;
-}
 
 .well {
         text-align: center;
         background-image: url(images/dauncoklat.jpg);
         color:black;
         font-family: arial; 
-        font-size: 20px;
-        height: 600px;
-        border: 0px;
+        height: 700px;
+        border:0px;
         }
 
 .paragraf{ 
           text-align: justify;
+          fontsize:15px;
         }
 .header {
             color: darkblue;
@@ -28,24 +25,38 @@
 .center {text-align: center;
                  
         }
-.images {width:100%; 
-                height:300px
-        }
+
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-      width: 100%;
-      height:80vh;
-      margin: 10px;
+      width: 80%;
+      height:50vh;
+      margin: auto;
       } 
 .side {text-align: center;
-        background-color: lightgrey;  
+        background-color: transparent;  
         color:blue;
-        height: 300px;
+        width:100%
+        height: 400px;
         }
  
+.iklan {text-align: center;
+        background-color: lightgrey;  
+        color:blue;
+        height: 400px;
+        }
 
-.motto{font-size: 500px;
-color:blue;
+.jumbotron {
+    position: relative;
+    background-size: cover;
+    overflow: hidden;
+    color:red;
+    background-color: transparent;
+    height: 200px;
+    border: 0px;
+}
+
+.even{font-size: 25px;
+      color:#FF3300;
 }
 
 .body {background-image:url(images/dauncoklat.jpg);
@@ -137,3 +148,4 @@ a.socialIcon:hover, .socialHoverClass {
 
 .icons {
  background-color:#CC9900;   
+

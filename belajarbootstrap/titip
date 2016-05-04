@@ -1,0 +1,123 @@
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+*{font-family:"Indie+Flower" !important}
+
+ <div class="row">
+            <div class="col-md-3 well">
+                     </div>
+      </div>
+      
+           <div class="col-md-6">
+                <p> Kavling Siap Bangun "Orchid Garden" terletak di Jl. Raya Jabung, Desa Jabung, Kecamatan Jabung, Kabupaten Malang. Berada di jalur utama kecamatan Jabung. Kecamatan Jabung sebagai salah satu dari 33 (tiga puluh tiga) Kecamatan di Wilayah Kabupaten Malang yang terletak sebelah Timur 15 Km dari ibukota / pusat pemerintahan Kabupaten Malang, dan berjarak + 105 Km dari ibukota Propinsi Jawa Timur, serta ketinggian wilayah Kecamatan Jabung dari permukaan laut + 500 m dengan suhu maksimum 32* C, Minimum 32* C, sedangkan curah hujan 350 mm / tahun. Terdiri dari 77 kavling tanah dan 8 kavling untuk Ruko. Fasilitas yang tersedia Jalan Paving, Pagar keliling kawasan, Saluran air dan listrik.
+
+                  Batas – batas Wilayah kecamatan Jabung adalah :<br>
+
+                    Utara     :  Kecamatan Tutur – Kabupaten Pasuruan <br>
+
+                    Timur     :  Kecamatan Tumpang <br>
+
+                    Selatan   :  Kecamatan Pakis <br>
+
+                    Barat     :  Kecamatan Singosari<br>
+                </p> 
+               
+                                    <!--carausel-->
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                      </ol>
+
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                          <img src="images/jalanjb.jpg"  alt="ogjalan">
+                        </div>
+
+                        <div class="item">
+                          <img src="images/lokasijabung.jpg" alt="oglokasi">
+                        </div>
+
+                        <div class="item">
+                          <img src="images/jabung.jpg" alt="ogjabung">
+                        </div>
+                          
+                          <div class="item">
+                          <img src="images/doserjb.jpg" alt="ogdoser">
+                        </div>
+                          
+                </div>
+
+                      <!-- Left and right controls -->
+                      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+
+          </div>
+       
+          <div class="col-md-3 well">
+            
+          </div>
+      
+-------------------------------------------
+ <div class="col-md-4 well">
+             <h1 class="header">PRICELIST</h1>
+           
+             <div class="row-fluid"> 
+        <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th class="center">TYPE</th> 
+                <th class="center">HARGA</th>
+                <th class="center">LOKASI</th>
+            </tr>
+        </thead>
+             
+            
+         <tbody>
+             
+        <!--isi table-->
+         
+        </tbody>
+    </table>
+    </div>
+     
+           <script>
+       // 1. konek ke firebase
+      var ref = new Firebase('https://tugasrumah.firebaseio.com/');
+       
+       //mengosongkan tbody
+       // $("table tbody").html("");
+       
+       //2. ambil data
+       ref.on("value", function(data) {
+            
+           //. 3.Masukkan data produk ke variabel
+           var pricelist = data.val().PRICELIST;
+           
+           //4.Mengeluarkan dan menampilkan data
+           $.each(pricelist, function(index, value){
+               var type = value.TYPE;
+               var harga = value.HARGA;
+               var lokasi = value.LOKASI;
+               
+               $("table tbody").append(
+                   "<tr>"+
+                   "<td >"+type+"</td>"+
+                   "<td>"+harga+"</td>"+
+                   "<td>"+lokasi+"</td>"+
+                   "</tr>"
+                );
+               
+           });
+       });
+      </script>
+      -------------------------------------------------------------------------

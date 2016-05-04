@@ -1,0 +1,19 @@
+.nav{background-color: brown;
+}
+.body{background-image: url(images/batikgrey.jpg);
+    margin-top:10px;
+    margin-bottom:10px; 
+    
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+      width: 80%;
+      height:70vh;
+      margin:auto;
+      } 
+.well {
+        text-align: center;
+        color:black;
+        height: 600px;
+        }
